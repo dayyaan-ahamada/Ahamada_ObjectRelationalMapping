@@ -8,10 +8,12 @@ import java.util.List;
 import java.util.Locale;
 
 public class Catalogue implements I_Catalogue {
+
+    private String nom;
     private List<I_Produit> lesProduits;
     private static Catalogue instanceCatalogue;
 
-    protected Catalogue() {
+    public Catalogue() {
         this.lesProduits = new ArrayList<>();
     }
 
@@ -19,6 +21,14 @@ public class Catalogue implements I_Catalogue {
         if (instanceCatalogue == null)
             instanceCatalogue = new Catalogue();
         return instanceCatalogue;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     @Override

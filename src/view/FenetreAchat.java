@@ -1,11 +1,11 @@
 package view;
 
-import controller.ControllerAchatVente;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Objects;
 import javax.swing.*;
+
+import controller.ControllerAchatVente;
 
 public class FenetreAchat extends JFrame implements ActionListener {
 
@@ -44,4 +44,5 @@ public class FenetreAchat extends JFrame implements ActionListener {
 
 		this.dispose();
 	}
+
 }

@@ -1,12 +1,12 @@
 package controller;
 
-import dao.DAO;
-import dao.DAOFactory;
+import dao.I_DAOProduit;
+import dao.DAOAbstractFactory;
 import model.Catalogue;
 import model.Produit;
 
 public class ControllerProduit {
-    private static final DAO dao = DAOFactory.getInstance().createDao();
+    private static final I_DAOProduit daoProduit = DAOAbstractFactory.getInstance().createDAOProduit();
     private static final Catalogue catalogue = Catalogue.getInstanceCatalogue();
 
     public static boolean createProduit(String nom, String prix, String quantite) {
@@ -15,14 +15,14 @@ public class ControllerProduit {
         int quantiteProduit = Integer.parseInt(quantite);
 
         boolean isAdding = catalogue.addProduit(nom, prixProduit, quantiteProduit);
-        boolean isInserting = dao.create(new Produit(nom, prixProduit, quantiteProduit));
+        boolean isInserting = daoProduit.create(new Produit(nom, prixProduit, quantiteProduit),catalogue.getNom());
 
         return isAdding && isInserting;
     }
 
     public static boolean supprimerProduit(String nom) {
         boolean isRemoving = catalogue.removeProduit(nom);
-        boolean isDeleting = dao.delete(dao.read(nom));
+        boolean isDeleting = daoProduit.delete(daoProduit.read(nom,catalogue.getNom()),catalogue.getNom());
 
         return isRemoving && isDeleting;
     }

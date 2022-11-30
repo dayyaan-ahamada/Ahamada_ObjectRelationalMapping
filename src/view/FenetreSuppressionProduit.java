@@ -1,11 +1,11 @@
 package view;
 
-import controller.ControllerProduit;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Objects;
 import javax.swing.*;
+
+import controller.ControllerProduit;
 
 public class FenetreSuppressionProduit extends JFrame implements ActionListener {
 

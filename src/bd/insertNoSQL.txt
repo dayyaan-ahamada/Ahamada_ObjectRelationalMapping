@@ -1,0 +1,23 @@
+db.createCollection("Catalogues");
+db.createCollection("Produits");
+
+db.Catalogues.insert({"_id":"1","nomCatalogue":"Noitaicossa"});
+db.Catalogues.insert({"_id":"2","nomCatalogue":"Le Redoutable"});
+db.Catalogues.insert({"_id":"3","nomCatalogue":"Formacia"});
+db.Catalogues.insert({"_id":"3","nomCatalogue":"Radio Suicide"});
+
+db.Produits.insert({"_id":"1","nomProduit":"Séjour à Hanga Roa", "prixProduit":"2400", "quantiteStock":"3", "nomCatalogue":"Noitaicossa"});
+db.Produits.insert({"_id":"2","nomProduit":"Séjour à Luleå", "prixProduit":"970", "quantiteStock":"6", "nomCatalogue":"Noitaicossa"});
+db.Produits.insert({"_id":"3","nomProduit":"Séjour à Antigua-et-Barbuda", "prixProduit":"3780", "quantiteStock":"2", "nomCatalogue":"Noitaicossa"});
+db.Produits.insert({"_id":"4","nomProduit":"Séjour à La Réunion", "prixProduit":"1999", "quantiteStock":"1","nomCatalogue":"Noitaicossa"});
+db.Produits.insert({"_id":"5","nomProduit":"Nuitée chambre simple", "prixProduit":"70", "quantiteStock":"75", "nomCatalogue":"Le Redoutable"});
+db.Produits.insert({"_id":"6","nomProduit":"Nuitée chambre double", "prixProduit":"130", "quantiteStock":"30", "nomCatalogue":"Le Redoutable"});
+db.Produits.insert({"_id":"7","nomProduit":"Nuitée suite nuptiale", "prixProduit":"400", "quantiteStock":"2", "nomCatalogue":"Le Redoutable"});
+db.Produits.insert({"_id":"8","nomProduit":"Nuitée suite royale", "prixProduit":"750", "quantiteStock":"1", "nomCatalogue":"Le Redoutable"});
+db.Produits.insert({"_id":"9","nomProduit":"Mars", "prixProduit":"1.2", "quantiteStock":"5", "nomCatalogue":"Formacia"});
+db.Produits.insert({"_id":"10","nomProduit":"Feuille A4", "prixProduit":"0.1", "quantiteStock":"550", "nomCatalogue":"Formacia"});
+db.Produits.insert({"_id":"11","nomProduit":"Casque WH-1000XM3", "prixProduit":"300", "quantiteStock":"15", "nomCatalogue":"Formacia"});
+db.Produits.insert({"_id":"12","nomProduit":"Tomate", "prixProduit":"0.8", "quantiteStock":"30", "nomCatalogue":"Formacia"});
+db.Produits.insert({"_id":"13","nomProduit":"Tamarin", "prixProduit":"1", "quantiteStock":"66", "nomCatalogue":"Formacia"});
+db.Produits.insert({"_id":"14","nomProduit":"Radio Suicide", "prixProduit":"10", "quantiteStock":"500", "nomCatalogue":"Radio Suicide"});
+db.Produits.insert({"_id":"15","nomProduit":"Varnish", "prixProduit":"5000", "quantiteStock":"1", "nomCatalogue":"Radio Suicide"});

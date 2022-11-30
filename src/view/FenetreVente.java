@@ -1,10 +1,10 @@
 package view;
 
-import controller.ControllerAchatVente;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import controller.ControllerAchatVente;
 
 public class FenetreVente extends JFrame implements ActionListener {
 

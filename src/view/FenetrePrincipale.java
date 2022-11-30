@@ -1,10 +1,10 @@
 package view;
 
-import controller.ControllerStock;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import controller.ControllerStock;
 
 
 public class FenetrePrincipale extends JFrame implements ActionListener,
@@ -70,7 +70,7 @@ public class FenetrePrincipale extends JFrame implements ActionListener,
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == btAfficher)
-            new FenetreAffichage(ControllerStock.afficherStocks());
+            new FenetreAffichage(ControllerStock.afficherStocks(),ControllerStock.getNomCatalogue());
         if (e.getSource() == btNouveauProduit)
 //			new view.FenetreNouveauProduit(tabCategories);
             new FenetreNouveauProduit();

@@ -10,4 +10,5 @@ public interface I_Produit {
 	String getNom();
 	int getQuantite();
 	String toString();
+
 }
