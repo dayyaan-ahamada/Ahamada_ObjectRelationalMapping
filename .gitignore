@@ -1,0 +1,9 @@
+
+*.xml
+*.class
+*.iml
+.gitattributes
+out/
+
+!bd/Produits.xml
+!bd/insert.sql
